@@ -1,0 +1,20 @@
+<ion-view view-title="Scan Barcode">
+  <div class="bar bar-header item-input-inset">
+    <a href="#/remoov/category" class="button" id="back">Back</a>
+    <h1 class="title">Item Processing</h1>
+    <a ng-href="{{nextpage}}" class="button" ng-click="SaveBarcode()">Next</a>
+  </div>
+  <ion-content class="padding has-header">
+    <div class="list" style="text-align:center">
+      <label class="item item-input item-stacked-label" style="border:0;margin-top:70px">
+        <span class="input-label">Scan Barcode</span><br><br>
+        <button class="button button-light" ng-click = "scanBarcode()">------------------------------</button><br><br>
+        <span ng-if="barcode_text">Barcode = {{barcode_text}}</span>
+      </label>
+      <label class="item item-input item-stacked-label" style="border:0;margin-top:70px">
+        <span class="input-label">Or input manually</span><br><br>
+        <input type="text" placeholder="Barcode" id="barcode_text" style="text-align:center;width: 130px;margin: 0 auto;border: 1px solid lightgrey;" maxlength="7" minlength="7">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

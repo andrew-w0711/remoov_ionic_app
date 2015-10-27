@@ -1,0 +1,133 @@
+<ion-view view-title="Item Review">
+  <div class="bar bar-header item-input-inset">
+    <a ng-href="#/remoov/barcode" class="button">Back</a>
+    <h1 class="title">Processing - {{barcode}}</h1>
+    <a href="javascript: void(0)" class="button">Submit</a>
+  </div>
+  <ion-content class="padding has-header">
+    <div class="list list-inset">
+
+      <div class="row">
+        <div class="col col-offset-10 col-33">Quantity</div>
+        <input type="text" class="col col-offset-10 col-10" style="border:1px solid" />
+      </div>
+
+      <div class="row" style="margin-top:20px">
+        <div class="col col-offset-10 col-33">Pieces Per Unit</div>
+        <select class="col col-offset-10 col-10">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <div class="row" style="margin-top:20px">
+        <ul class="list col col-offset-10">
+          <li class="custom_item item-toggle no-border">
+             Multiple Item Box?
+             <label class="col col-offset-10 col-20 toggle custom_toggle toggle-balanced">
+               <input type="checkbox">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row" style="margin-top:20px">
+        <div class="col col-offset-10 col-33">Condition:</div>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <label class="col col-offset-10 row">
+          <input type="radio" id="radio1" name="condition" value="excellent" checked>
+             <label for="radio1" class="col col-18 option_font">Excellent</label>
+          <input type="radio" id="radio2" name="condition"value="very_good">
+             <label for="radio2" class="col col-18 option_font">Very Good</label>
+          <input type="radio" id="radio3" name="condition" value="good">
+             <label for="radio3" class="col col-18 option_font">Good</label>
+          <input type="radio" id="radio4" name="condition" value="fair">
+            <label for="radio4" class="col col-18 option_font">Fair</label>
+          <input type="radio" id="radio5" name="condition"value="ok">
+            <label for="radio5" class="col col-10 option_font">Ok</label>
+          <input type="radio" id="radio6" name="condition" value="bad">
+            <label for="radio6" class="col col-18 option_font">Bad</label>
+        </label>
+      </div>
+
+      <div class="row" style="margin-top:20px">
+        <ul class="list col col-offset-10">
+          <li class="custom_item item-toggle no-border">
+             Needs Repair?
+             <label class="col col-offset-10 col-20 toggle custom_toggle toggle-balanced">
+               <input type="checkbox">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+          <li class="custom_item item-toggle no-border">
+             Missing Parts?
+             <label class="col col-offset-10 col-20 toggle custom_toggle toggle-balanced">
+               <input type="checkbox">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+          <li class="custom_item item-toggle no-border">
+             Particle Board?
+             <label class="col col-offset-10 col-20 toggle custom_toggle toggle-balanced">
+               <input type="checkbox">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row" style="margin-top:20px">
+        <div class="col col-offset-10 col-33">Dimensions (inches)</div>
+      </div>
+
+      <div class="row" style="margin-top:5px">
+        <div class="col col-offset-10 col-20">Length</div>
+        <input type="text" class="col col-offset-10 col-10" style="border:1px solid">
+      </div>
+
+      <div class="row" style="margin-top:5px">
+        <div class="col col-offset-10 col-20">Width</div>
+        <input type="text" class="col col-offset-10 col-10" style="border:1px solid">
+      </div>
+
+      <div class="row" style="margin-top:5px">
+        <div class="col col-offset-10 col-20">Height</div>
+        <input type="text" class="col col-offset-10 col-10" style="border:1px solid">
+      </div>
+
+      <div class="row" style="margin-top:20px">
+        <div class="col col-offset-10 col-33">Notes</div>
+      </div>
+
+      <div class="row" style="margin-top:5px">
+        <textarea class="col col-offset-10" id="notes"></textarea>
+      </div>
+
+      <div class="row" style="margin-top:20px">
+        <span class="col col-offset-10 input-label">Photos (Required)</span>
+      </div>
+
+      <a class="col-offset-10 col col-25 photos" href="#remoov/photo">Front</a>
+      <a class="photos col col-25" href="#remoov/photo" style="margin-left:10px">Photo 2</a>
+
+      <div class="row" style="padding-top:20px">
+        <span class="col col-offset-10 col-90 input-label">Photos (labels,stamps,scratches,etc)</span>
+      </div>
+
+      <a href="#remoov/photo" class="photo_plus col-offset-10" href="#remoov/photo"></a>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+<ion-view view-title="Category">
+  <div class="bar bar-header item-input-inset">
+    <a ng-href="#/remoov/itempage/{{customer_id}}" ng-click="calPastUrl()" class="button">Back</a>
+    <h1 class="title">Select Category</h1>
+  </div>
+  <ion-content class="padding has-header">
+    <div class="list category_list">
+
+        <a class="item item-thumbnail-left" href="#/remoov/barcode" ng-click="SaveCategoryId(0)">
+          <img src="./img/furniture.jpg">
+          <h1>Furniture</h1>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#/remoov/barcode" ng-click="SaveCategoryId(1)">
+          <img src="./img/painting.jpg">
+          <h1>Painting / Poster</h1>
+        </a>
+        <a class="item item-thumbnail-left" href="#/remoov/barcode" ng-click="SaveCategoryId(2)">
+
+          <img src="./img/electronics.jpg">
+          <h1>Electronics</h1>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#/remoov/barcode" ng-click="SaveCategoryId(3)">
+          <img src="./img/Wearables.jpg">
+          <h1>Wearables</h1>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#/remoov/barcode" ng-click="SaveCategoryId(4)">
+          <img src="./img/Large_Appliance.jpg">
+          <h1>Large Appliance</h1>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#/remoov/barcode" ng-click="SaveCategoryId(5)">
+          <img src="./img/other.jpg">
+          <h1>Other</h1>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="Home">
+  <div class="bar bar-header item-input-inset row">
+    <h1 class="title">Home</h1>
+    <label class="item-input-wrapper col-25 header_search_bar">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search" ng-model='nameFilter.contract_name'>
+    </label>
+  </div>
+    
+  <ion-content class="padding has-header">
+      
+    <div class="ajax_loading">
+        <i class="fa fa-refresh fa-spin loading_image" ng-show = "isLoading"></i>
+    </div>
+    <ul class="list">
+      <a class="item" ng-repeat = "customer in customers | filter :nameFilter" ng-href="#/remoov/itempage/{{customer.contract_id}}" ng-click ="SaveCustomerInfo(customer.contract_id)">
+        {{customer.contract_name}}
+      </a>
+    </ul>
+  </ion-content>
+</ion-view>

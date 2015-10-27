@@ -1,0 +1,61 @@
+<ion-view view-title="Item Review">
+  <div class="bar bar-header item-input-inset">
+    <a ng-href="#/remoov/itempage/{{customer_id}}" class="button">Back</a>
+    <h1 class="title">Item Processed</h1>
+    <a ng-href="#/remoov/edit" class="button">Edit</a>
+  </div>
+  <ion-content class="padding has-header">
+    <div class="list list-inset">
+      <div class="custom_item_for_review">
+        Item #: {{information.barcode}}
+      </div>
+      <div class="custom_item_for_review">
+        Owner: {{information.owner_name}}
+      </div> 
+      <div class="custom_item_for_review">
+        Quantity: {{information.quantity}}
+      </div>
+      <div class="custom_item_for_review">
+        Pieces Per Unit: {{information.pieces_per_unit}}
+      </div>
+      <div class="custom_item_for_review">
+        Condition: {{information.condition}}
+      </div>
+      <div class="custom_item_for_review">
+        Needs Repair? {{information.needs_repair}}
+      </div>
+      <div class="custom_item_for_review">
+        Missing Parts? {{information.missing_parts}}
+      </div>
+      <div class="custom_item_for_review">
+        Particle Board? {{information.particle_board}}
+      </div>
+      <div class="custom_item_for_review">
+        Dimentions (inches)
+        <div class="custom_item_for_review">
+          Length: {{information.dimensions.length}}
+        </div>
+        <div class="custom_item_for_review">
+          Width : {{information.dimensions.width}}
+        </div>
+        <div class="custom_item_for_review">
+          Height: {{information.dimensions.height}}
+        </div>
+      </div>
+      <div class="custom_item_for_review"></div>
+      <div class="custom_item_for_review">
+        Notes
+        <div class="custom_item_for_review" style="padding:0;padding-top:5px;">
+          {{information.notes}}
+        </div>
+      </div>
+        
+      <div class="custom_item_for_review">
+        Photos
+        <div class="custom_item_for_review row" style="padding:0;padding-top:5px;">
+          <img ng-repeat = "photo in information.photos" class="col col-25" ng-src="{{photo}}">
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

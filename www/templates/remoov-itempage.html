@@ -1,0 +1,21 @@
+<ion-view view-title="User Items">
+  <div class="bar bar-header item-input-inset">
+    <a href="#/remoov/home" class="button">Back</a>
+    <h1 class="title">{{items.contract_name}}</h1>
+    <a href="#/remoov/category" class="button header_add_button">Add</a>
+  </div>
+  <ion-content class="padding has-header">
+    <div class="list category_list">
+        <div class = "item_div" ng-repeat = "item in items.items">
+          <a class="item custom_item item-thumbnail-left" ng-href= "#/remoov/itemview/{{item.barcode}}">
+            <img src="./img/empty.jpg">
+            <h1 style="margin-left:100px;margin-top:15px;">{{item.barcode}}</h1>
+          </a>
+          <button class="button button-assertive delete_item_button" ng-click = "remove_item(item)">Delete</button>
+        </div>
+    </div>
+    <div class="processing_div" ng-show="processing">
+        <i class="fa fa-refresh fa-spin loading_image" ng-show="processing"></i>  
+    </div>
+  </ion-content>
+</ion-view>

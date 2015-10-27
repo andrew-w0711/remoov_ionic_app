@@ -1,0 +1,26 @@
+<ion-view view-title="Item Review">
+	<div class="bar bar-header item-input-inset">
+		<a ng-href="#/remoov/furniture" class="button" ng-click="SaveImageUrls()">Back</a>
+		<h1 class="title">Processing - {{barcode}}</h1>
+	</div>
+	<ion-content class="padding has-header">
+		<div class="list card">
+			<div class="item item-body">
+				<img class="full-image" ng-src="{{imgURL}}">
+			</div>
+		</div>
+		<div class="list card">
+			<div class="item item-body">
+				<div class="row">
+					<button class="selection_button col col-25 selected_button" value="0" ng-click="show_image(0)">Front</button>
+					<button class="selection_button col col-25" value="1" ng-click="show_image(1)">Angle 1</button>
+					<button class="selection_button col col-25" value="2" ng-click="show_image(2)">Angle 2</button>
+					<button class="selection_button col col-25" ng-click="add_more_images()">+</button>
+				</div>
+				<div>
+					<button class="custom_button button button-assertive" ng-click="takePhoto()"></button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
